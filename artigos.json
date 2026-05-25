@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "titulo": "Artigo de exemplo",
+        "slug": "artigo-exemplo",
+        "data": "24/05/2026"
+    },
+    {
+        "id": 2,
+        "titulo": "Segundo artigo",
+        "slug": "segundo-artigo",
+        "data": "24/05/2026"
+
+    }
+    
+]
