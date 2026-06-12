@@ -215,7 +215,7 @@ main {
 
 
 .watermark-wrapper::after {
-    content: "Source: DhammoEhipassiko.com"; 
+    content: "Ehipassiko.com.br"; 
     position: absolute;
     bottom: 8px; 
     right: 10px; 

@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, 150);
                 
             } else {
-                // É uma FOTO. Tenta pegar o 'data-src'. Se não tiver, pega o 'src' direto (fotos antigas)
+                // É uma FOTO. Tenta pegar o 'data-src'. Se não tiver, pega o 'src' direto
                 const imgSrc = triggerElement.getAttribute('data-src') || triggerElement.getAttribute('src');
                 
                 videoContainer.classList.add('d-none');
