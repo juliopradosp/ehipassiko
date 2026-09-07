@@ -1,0 +1,567 @@
+/* ==========================================
+Variáveis de Cores
+========================================== */
+:root {
+    --dhamma-bg: #FCFAFA;
+    --dhamma-primary: #8B2500;
+    --dhamma-secondary: #E88D14;
+    --dhamma-text: #2c2c2c;
+    --dhamma-border: #e0d8d3;
+}
+
+body {
+    background-color: #e9ecef;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dhamma-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.app-container {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--dhamma-bg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    padding: 20px 30px 0 30px;
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+
+/* ==========================================
+Seções com Parallax
+========================================== */
+.parallax-section {
+    background-image: url('https://res.cloudinary.com/nuxmz7hv/image/upload/v1788477172/55326493.png');
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 30px;
+    z-index: 1;
+}
+
+.parallax-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(252, 250, 250, 0.8);
+    z-index: -1;
+}
+
+/* Seção 1 - Hero */
+#hero-section {
+    min-height: 450px;
+}
+
+.dhammo-title {
+    font-family: 'Merriweather', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dhamma-primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.characteristic-pali {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    color: var(--dhamma-secondary);
+    font-style: italic;
+    margin-bottom: 15px;
+    min-height: 48px;
+}
+
+.characteristic-translation {
+    font-size: 1.1rem;
+    color: #555;
+    min-height: 60px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.char {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(10px);
+    animation: revealChar 0.4s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes revealChar {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Rotação da roda */
+@keyframes girarRoda {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#hero-section img {
+  transform-origin: center; 
+  animation: girarRoda 30s linear infinite;
+}
+
+/* ==========================================
+Seção 2 - Texto Fixo
+========================================== */
+.text-section {
+    background-color: var(--dhamma-bg);
+    padding: 60px 40px;
+    text-align: justify;
+}
+
+.text-section h2 {
+    font-family: 'Merriweather', serif;
+    color: var(--dhamma-primary);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.text-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.text-section blockquote {
+    border-left: 4px solid var(--dhamma-secondary);
+    padding-left: 15px;
+    font-style: italic;
+    color: #666;
+    margin: 25px 0;
+}
+
+/* ==========================================
+Seção 3 - Call to Action (CTA)
+========================================== */
+#cta-section {
+    background-image: url('https://res.cloudinary.com/nuxmz7hv/image/upload/v1788477172/55326493.png');
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 30px;
+    z-index: 1;
+    min-height: 300px;
+    padding: 60px 30px;
+}
+
+#cta-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(252, 250, 250, 0.4);
+    z-index: -1;
+}
+
+.btn-inscrever {
+    background-color: var(--dhamma-primary);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(139, 37, 0, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+    text-decoration: none; /* Como agora é um link */
+}
+
+.btn-inscrever:hover {
+    background-color: #721d00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(139, 37, 0, 0.4);
+    color: white;
+}
+
+
+/* ==========================================
+Seção dos Perfis
+========================================== */
+/* Envolve o conteúdo principal para separar do footer */
+.main-wrapper {
+    flex: 1;
+    padding-bottom: 30px;
+}
+
+/* ==========================================
+    Perfil e Bio
+    ========================================== */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.profile-header:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--dhamma-secondary);
+    margin-right: 15px;
+    transition: box-shadow 0.3s ease;
+}
+.profile-header:hover .profile-pic {
+    box-shadow: 0 4px 8px rgba(232, 141, 20, 0.3);
+}
+.profile-name {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--dhamma-primary);
+}
+.profile-bio {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #555;
+    font-style: italic;
+}
+
+/* ==========================================
+    Navegação (Abas)
+    ========================================== */
+.nav-tabs {
+    border-bottom: 2px solid var(--dhamma-border);
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.nav-tabs::-webkit-scrollbar {
+    display: none;
+}
+.nav-tabs .nav-link {
+    color: #777;
+    border: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 0;
+    white-space: nowrap;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+.nav-tabs .nav-link.active {
+    color: var(--dhamma-primary);
+    background-color: transparent;
+    border-bottom: 3px solid var(--dhamma-secondary);
+}
+.nav-tabs .nav-link:hover:not(.active) {
+    color: var(--dhamma-secondary);
+    border-bottom: 3px solid #ccc;
+}
+
+/* ==========================================
+    Aba Sobre mim (Timeline)
+    ========================================== */
+.timeline-container { padding-left: 10px; }
+.journey-item {
+    position: relative;
+    padding-left: 25px;
+    border-left: 2px solid var(--dhamma-border);
+    margin-bottom: 30px;
+}
+.journey-item:last-child { border-left-color: transparent; }
+.journey-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--dhamma-secondary);
+    border: 2px solid var(--dhamma-bg);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.journey-item:hover::before {
+    transform: scale(1.3);
+    background-color: var(--dhamma-primary);
+}
+.journey-title {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    color: var(--dhamma-primary);
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+.journey-text {
+    color: #444;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+    Aba Leituras
+    ========================================== */
+.gamification-section { margin-bottom: 30px; }
+.gamification-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dhamma-primary);
+    border-bottom: 1px solid var(--dhamma-border);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.progress-item { margin-bottom: 15px; }
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+.progress {
+    height: 12px;
+    background-color: #f0e6e1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.progress-bar {
+    background-color: var(--dhamma-secondary);
+    width: 0;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.progress-stats {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: right;
+    margin-top: 2px;
+}
+
+/* ==========================================
+    Aba Artigos
+    ========================================== */
+.articles-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid var(--dhamma-border);
+    border-radius: 5px;
+    background: #fff;
+}
+.article-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.3s ease, padding-left 0.3s ease;
+}
+.article-item:last-child { border-bottom: none; }
+.article-item:hover {
+    background: #fcf8f5;
+    padding-left: 20px;
+    border-left: 3px solid var(--dhamma-secondary);
+}
+.article-date {
+    color: var(--dhamma-secondary);
+    font-size: 0.85rem;
+    font-family: monospace;
+    margin-right: 10px;
+}
+.article-title-list {
+    font-weight: 600;
+    color: var(--dhamma-text);
+    transition: color 0.3s;
+}
+.article-item:hover .article-title-list { color: var(--dhamma-primary); }
+
+.article-view h1 {
+    font-family: 'Merriweather', serif;
+    color: var(--dhamma-primary);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+.article-view .article-meta {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--dhamma-border);
+    padding-bottom: 10px;
+}
+.article-view .article-body {
+    font-family: 'Merriweather', serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+}
+.back-btn {
+    color: var(--dhamma-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: transform 0.2s, color 0.2s;
+}
+.back-btn:hover {
+    text-decoration: underline;
+    color: var(--dhamma-primary);
+    transform: translateX(-5px);
+}
+
+/* ==========================================
+    Aba Galeria
+    ========================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+.thumb-wrapper {
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    background-color: #eee;
+    position: relative; /* ADICIONE ESTA LINHA */
+}
+
+/* Do album */
+ .thumb-1x1 {
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center;
+transition: transform 0.4s ease, filter 0.4s ease;
+} 
+
+/* Das fotos dentro do album */
+.thumb-1x1-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    aspect-ratio: 1 / 1; 
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+
+.thumb-wrapper:hover .thumb-1x1,
+.thumb-wrapper:hover .thumb-1x1-img {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+}
+
+
+/* Ícone de play aplicado sobre o wrapper (fica por cima da img) */
+.thumb-wrapper.video::after {
+    content: '▶';
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    transition: background 0.3s;
+    
+    /* Configurações para sobrepor a imagem */
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Permite clicar através do ícone */
+    z-index: 2; /* Garante que fique acima da tag img */
+}
+
+/* Efeito ao passar o mouse no vídeo */
+.thumb-wrapper.video:hover::after { 
+    background: rgba(0,0,0,0.4); 
+}
+
+.modal-content { background-color: transparent; border: none; }
+.modal-header { border: none; padding-bottom: 0; }
+.modal-header .btn-close {
+    background-color: white;
+    opacity: 1;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+.modal-header .btn-close:hover { transform: rotate(90deg); }
+.media-full {
+    width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    animation: fadeUp 0.4s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+Footer
+========================================== */
+.app-footer {
+    background-color: var(--dhamma-bg);
+    border-top: 1px solid var(--dhamma-border);
+    padding: 25px 0;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+.app-footer span {
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
+    color: #aaa;
+}
+
+@media (max-width: 576px) {
+    .parallax-section { padding: 60px 20px; }
+    .text-section { padding: 40px 20px; }
+    .dhammo-title { font-size: 2.5rem; }
+    .characteristic-pali { font-size: 1.5rem; }
+    .characteristic-translation { font-size: 1rem; }
+
+    /*  Perfis  */
+    .app-container { padding: 15px 15px 0 15px; }
+    .profile-header { flex-direction: column; text-align: center; }
+    .profile-pic { margin-right: 0; margin-bottom: 10px; }
+}
