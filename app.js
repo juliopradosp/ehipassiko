@@ -1,10 +1,10 @@
 
 const dhammaQualities = [
-    { pali: "Svākkhāto", trans: "O Dhamma é perfeitamente ensinado (pelo Buda)." },
-    { pali: "Sandiṭṭhiko", trans: "Visível aqui e agora (perceptível nesta mesma vida)." },
-    { pali: "Akāliko", trans: "Atemporal (dá frutos sem demora, não depende do tempo)." },
-    { pali: "Ehipassiko", trans: "Que convida a 'vir e ver' (aberto à investigação pessoal)." },
-    { pali: "Opanayiko", trans: "Que conduz adiante (direciona a mente para o Nibbana)." },
+    { pali: "Svākkhāto Bhagavatā", trans: "Perfeitamente ensinado pelo Buda." },
+    { pali: "Sandiṭṭhiko", trans: "Visível aqui e agora." },
+    { pali: "Akāliko", trans: "Atemporal." },
+    { pali: "Ehipassiko", trans: "Que convida a 'vir e ver por si mesmo'." },
+    { pali: "Opanayiko", trans: "Que conduz ao Nibbana." },
     { pali: "Paccattaṃ Veditabbo Viññūhi", trans: "A ser experimentado pessoalmente por cada um dos sábios." }
 ];
 

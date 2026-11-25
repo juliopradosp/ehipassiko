@@ -42,7 +42,7 @@ body {
 Seções com Parallax
 ========================================== */
 .parallax-section {
-    background-image: url('https://res.cloudinary.com/nuxmz7hv/image/upload/v1788477172/55326493.png');
+    background-image: url('https://res.cloudinary.com/nuxmz7hv/image/upload/v1788477175/IMG_20260621_112552401.jpg');
     position: relative;
     background-attachment: fixed;
     background-position: center;
@@ -159,7 +159,7 @@ Seção 2 - Texto Fixo
 Seção 3 - Call to Action (CTA)
 ========================================== */
 #cta-section {
-    background-image: url('https://res.cloudinary.com/nuxmz7hv/image/upload/v1788477172/55326493.png');
+    background-image: url('https://res.cloudinary.com/nuxmz7hv/image/upload/v1788477241/IMG_20260621_093217408.jpg');
     position: relative;
     background-attachment: fixed;
     background-position: center;
@@ -184,7 +184,7 @@ Seção 3 - Call to Action (CTA)
     z-index: -1;
 }
 
-.btn-inscrever {
+.btn-entrar {
     background-color: var(--dhamma-primary);
     color: white;
     font-size: 1.3rem;
@@ -201,7 +201,7 @@ Seção 3 - Call to Action (CTA)
     text-decoration: none; /* Como agora é um link */
 }
 
-.btn-inscrever:hover {
+.btn-entrar:hover {
     background-color: #721d00;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(139, 37, 0, 0.4);
@@ -418,8 +418,9 @@ Seção dos Perfis
 }
 .article-view .article-body {
     font-family: 'Merriweather', serif;
+
     font-size: 1.05rem;
-    line-height: 1.8;
+    line-height: 1.7;
     color: #333;
 }
 .back-btn {
